@@ -1,6 +1,6 @@
 # EXAMEN DOCKER
 
-**Prestashop** restaShop es una plataforma de comercio electrónico de código abierto que
+**Prestashop** es una plataforma de comercio electrónico de código abierto que
 permite a las empresas y personas crear tiendas en línea.
 Es una solución completa y flexible para la creación y gestión de tiendas en línea,
 lo que lo convierte en una opción popular para pequeñas y medianas empresas
@@ -8,7 +8,7 @@ que desean vender productos y servicios en Internet.
 
 
 ### CREACIÓN DOCKER-COMPOSE.YML
-Al crear el fichero *.yml* escribimos el código para definir
+Creamos un fichero *.yml* y escribimos el código para definir
 la configuración necesaria y ejecutar **Prestashop**:
 
 ```
@@ -60,12 +60,21 @@ Posteriormente, iniciamos los contenedores con el comando:
 ```
 $ DOCKER-COMPOSE UP -D
 ```
-Para comprobar que funciona correctamente, escribes la dirección IP seguido del puerto 8080:
+Desde la Interfaz, entramos en la base de datos para testear que
+la conexión funciona correctamente:
+
+![captura](./pictures/capturaTest.png)
+
+Para comprobar que funciona correctamente, escribimos la dirección IP seguido del puerto 8080
+en el navegador: http://10.0.9.16:8080 .
 
 ![captura](./pictures/capturaPrestashop.png)
 
-Tras esto, desde la Interfaz, entramos en la base de datos para testear que
-la conexión funciona correctamente:
-![captura](./pictures/capturaTest.png)
+Desde la misma página rellenamos los campos requeridos para completar
+la instalación de dicha base de datos hasta finalizar:
 
+![captura](./pictures/jorgePrestashop.png)
 
+Dando como resultado final: 
+
+![captura](./pictures/resultadoFinal.png)
