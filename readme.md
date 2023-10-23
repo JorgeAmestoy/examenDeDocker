@@ -56,8 +56,16 @@ otro volumen para poder personalizar los archivos de PrestaShop.
 **Puertos**: Se consigue que el puerto 3307 del sistema host se asocie al puerto 3306
 del contenedor.
 
-Finalmente, iniciamos los contenedores con el comando:
+Posteriormente, iniciamos los contenedores con el comando:
 ```
 $ DOCKER-COMPOSE UP -D
 ```
 Para comprobar que funciona correctamente, escribes la dirección IP seguido del puerto 8080:
+
+![captura](./pictures/capturaPrestashop.png)
+
+Tras esto, desde la Interfaz, entramos en la base de datos para testear que
+la conexión funciona correctamente:
+![captura](./pictures/capturaTest.png)
+
+
