@@ -43,3 +43,21 @@ services:
 volumes:
   db_data: {}
 ```
+**Servicios**: En este caso se definen, dos servicios:
+- db_prestashop: usando una imagen de la base de datos MySQL, se crean variables de entorno, entre ellas,
+  las credenciales de usuario, y se exponen los puertos
+  para que otros servicios accedan a esta.<br>
+- presta: usando la imagen más reciente de Prestashp, se establecen
+  las variables de entorno para poder conectarse.
+
+**Volúmenes**: Creamos un volumen db_data para almacenar los datos de MySQL y 
+otro volumen para poder personalizar los archivos de PrestaShop.
+
+**Puertos**: Se consigue que el puerto 3307 del sistema host se asocie al puerto 3306
+del contenedor.
+
+Finalmente, iniciamos los contenedores con el comando:
+```
+$ DOCKER-COMPOSE UP -D
+```
+Para comprobar que funciona correctamente, escribes la dirección IP seguido del puerto 8080:
